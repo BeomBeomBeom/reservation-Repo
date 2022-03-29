@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Date;
 
-@FeignClient(name="blueSquare", url="http://blueSquare:8080")
+@FeignClient(name="blueSquare", url="http://team01-blueSqure:8080")
 public interface HallService {
     @RequestMapping(method= RequestMethod.GET, path="/halls")
     public void checkReservation(@RequestBody Hall hall);
