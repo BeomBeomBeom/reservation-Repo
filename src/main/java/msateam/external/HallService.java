@@ -11,7 +11,7 @@ import java.util.Date;
 
 @FeignClient(name="blueSquare", url="http://team01-blueSqure:8080")
 public interface HallService {
-    @RequestMapping(method= RequestMethod.GET, path="/check/checkReservation")
+    @RequestMapping(method= RequestMethod.GET, path="/checkReservation")
     public boolean checkReservation(@RequestBody Hall hall);
     // public boolean  checkReservation(@RequestParam("seatId") long seatId);
     
