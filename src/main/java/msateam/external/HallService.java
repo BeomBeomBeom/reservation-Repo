@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Date;
 
-@FeignClient(name="halls", url="http://team01-blueSqure:8080")
+@FeignClient(name="blueSquare", url="http://team01-blueSqure:8080")
 public interface HallService {
     @RequestMapping(method= RequestMethod.GET, path="/checkReservation")
     // public void checkReservation(@RequestBody Hall hall);
-    public void checkReservation(@RequestParam("seatId") long seatId);
+    public boolean  checkReservation(@RequestParam("seatId") long seatId);
     
 
 }
