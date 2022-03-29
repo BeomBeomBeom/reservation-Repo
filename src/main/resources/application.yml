@@ -82,3 +82,7 @@ spring:
         event-out:
           destination: msateam
           contentType: application/json
+logging:
+  level:
+    org.hibernate.type: trace
+    org.springframework.cloud: debug
