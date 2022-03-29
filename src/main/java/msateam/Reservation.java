@@ -46,8 +46,9 @@ public class Reservation  {
         ////////////////////////////////////
 
         // 해당 ROOM이 Available한 상태인지 체크
-        boolean result = ReservationApplication.applicationContext.getBean(msateam.external.HallService.class)
-                        .checkReservation(this.getSeatId());
+        // boolean result = ReservationApplication.applicationContext.getBean(msateam.external.HallService.class)
+        //                 .checkReservation(this.getSeatId());
+        boolean result = true;
         System.out.println("######## Check Result : " + result);
 
         if(result) { 
