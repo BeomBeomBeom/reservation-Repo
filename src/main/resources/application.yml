@@ -63,7 +63,7 @@ spring:
     enabled: true
   zipkin:
     #base-url: http://jaeger-collector.default.svc.cluster.local:9411
-    base-url: http://jaeger-collector.istio-system:9411
+    base-url: http://zipkin.istio-system:9411
   cloud:
     stream:
       kafka:
