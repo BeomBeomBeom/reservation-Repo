@@ -53,6 +53,14 @@ hystrix:
 
 spring:
   profiles: docker
+  sleuth:
+    propagation-keys: x-request-id,x-ot-span-context
+    propagation:
+      type: B3,W3C
+  opentracing:
+    enabled: true
+  zipkin:
+    base-url: http://jaeger-collector.default.svc.cluster.local:9411
   cloud:
     stream:
       kafka:
@@ -74,3 +82,7 @@ spring:
         event-out:
           destination: msateam
           contentType: application/json
+logging:
+  level:
+    org.hibernate.type: trace
+    org.springframework.cloud: debug
